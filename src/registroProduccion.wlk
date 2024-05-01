@@ -30,7 +30,6 @@ object registroProduccion {
 		return registroDePiezas.last()
 	}
 	method cantidadProduccionesMayorALaPrimera(){
-		var primeraProduccion = registroDePiezas.get(0)
-		return registroDePiezas.count({unElemento => unElemento > primeraProduccion})
+		return registroDePiezas.count({unElemento => unElemento > registroDePiezas.first()})
 	}
 }
